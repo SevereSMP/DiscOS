@@ -2,6 +2,12 @@
 cls
 title DiscOS
 if %1 equ "/oi" goto installer
+if %1 equ "/?" (
+    echo ------ DiscOS ------
+    echo CMDLN ARGS
+    echo *NONE* ...........  Open Main Menu
+    echo /oi ..............  Open Setup Menu
+)
 
 ::CMDLN ARGS
 :: /oi ........ Open Setup Directly
