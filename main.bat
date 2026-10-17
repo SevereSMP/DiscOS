@@ -24,7 +24,10 @@ set /p "ans=Enter One Of The Above [1-4]: "
 ::Choose ANS
 if %ans% equ 1 goto installer
 
-
+echo Thats Not A Valid Answer.
+pause
+cls
+exit
 
 ::Real Codes
 
@@ -36,9 +39,14 @@ echo ------ DiscOS Installer ------
 echo 1. Run Full Setup
 echo 2. Auto Run
 echo    ^|- 2A. Add Auto Run Scheduler Task
-echo    ^|- 2B. Remove Auto Run Scheduler Task
+echo    ^+- 2B. Remove Auto Run Scheduler Task
 echo 3. Install Deps.
 echo 4. Check For Updates (*Reqires Deps)
 echo 5. Back
 echo ------ DiscOS Installer ------
-set /p "ans=Enter One Of The Above [1-5]: "
+set /p "ans=Enter One Of The Above [1-5/AB]: "
+
+
+::procec ans
+
+if %ans% equ 
