@@ -1,4 +1,5 @@
 @echo off
+setlocal enabledelayedexpansion
 cls
 title DiscOS
 if %1 equ "/oi" goto installer
@@ -49,4 +50,20 @@ set /p "ans=Enter One Of The Above [1-5/AB]: "
 
 ::procec ans
 
-if %ans% equ 
+if %ans% equ 1 (
+    cls
+    set /p "nk=Enter Your Licence Key: "
+    for /f "delims=" %%i in ('curl -s "https://cmds.severesmp.org/bash_proj/discos/keys/kmgt.php?key=!nk!&has-src=valid"') do set "ansc=%%i"
+    if !ansc! equ "true" (
+        echo The Key Seems To Be Valid!
+        setx dskKey !nk!
+    ) else if !ansc! equ "false" (
+        echo That Key Does Not Seem To Be Valid Anymore!
+        pause
+        exit
+    ) else (
+        echo That Key Seems To Be Wrong!
+        pause
+        exit
+    )
+)
