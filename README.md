@@ -1,4 +1,2 @@
-# DiscOS
-Just A Test Proj!
-
-It Stands For Disguise OS **(Not An OS!)**
+## DiscOS
+A Great Way To Make People Think
