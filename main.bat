@@ -85,5 +85,8 @@ if %ans% equ 1 (
     echo Add Scheduler Task: ???
     echo ------ DiscOS Setup ------
     set /p "ans=Would You Like to Copy Core files [Y/N]: "
-    
+
+    if !ans! equ y (
+
+    )
 )
