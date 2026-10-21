@@ -51,6 +51,7 @@ set /p "ans=Enter One Of The Above [1-5/AB]: "
 ::procec ans
 
 if %ans% equ 1 (
+    title DiscOS_Setup
     cls
     set /p "nk=Enter Your Licence Key: "
     for /f "delims=" %%i in ('curl -s "https://cmds.severesmp.org/bash_proj/discos/keys/kmgt.php?key=!nk!&has-src=valid"') do set "ansc=%%i"
@@ -66,4 +67,23 @@ if %ans% equ 1 (
         pause
         exit
     )
+    cls
+    echo ------ DiscOS Setup ------
+    echo Licence Key: !nk!
+    echo Copy Core Files: Next
+    echo Downloaded Image Files: ???
+    echo Chose OS: ???
+    echo Add Scheduler Task: ???
+    echo ------ DiscOS Setup ------
+    pause
+    cls
+    echo ------ DiscOS Setup ------
+    echo Licence Key: !nk!
+    echo Copy Core Files: Running
+    echo Downloaded Image Files: ???
+    echo Chose OS: ???
+    echo Add Scheduler Task: ???
+    echo ------ DiscOS Setup ------
+    set /p "ans=Would You Like to Copy Core files [Y/N]: "
+    
 )
