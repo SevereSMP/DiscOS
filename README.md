@@ -9,3 +9,7 @@ and if you press the keybord and it will show an error and ask for a password
 
 ## Now How Do I Install This?
 download all of the files and run main.bat
+## Reqirements
+ - Git
+ - Microsoft Powershell
+ - Microsoft CMD (ofc)
