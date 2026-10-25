@@ -70,7 +70,7 @@ if %ans% equ 1 (
     cls
     echo ------ DiscOS Setup ------
     echo Licence Key: !nk!
-    echo Copy Core Files: Next
+    echo Check Deps And Main: Next
     echo Downloaded Image Files: ???
     echo Chose OS: ???
     echo Add Scheduler Task: ???
@@ -79,14 +79,22 @@ if %ans% equ 1 (
     cls
     echo ------ DiscOS Setup ------
     echo Licence Key: !nk!
-    echo Copy Core Files: Running
+    echo Check Deps And Main: Running
     echo Downloaded Image Files: ???
     echo Chose OS: ???
     echo Add Scheduler Task: ???
     echo ------ DiscOS Setup ------
-    set /p "ans=Would You Like to Copy Core files [Y/N]: "
-
-    if !ans! equ y (
-
+    echo Checking DEPS
+    echo Checking GIT
+    where git >nul 2>nul
+    if !errorlevel! neq 0 (
+        echo [ERROR] Git is not installed or not in your PATH.
+        echo git is reqired for this script install it here:
+        echo https://git-scm.com/install/windows
+        pause
+        exit
     )
+
+echo Git is installed continuing
+
 )
