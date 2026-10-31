@@ -1,3 +1,5 @@
+#WARNING
+some of the features are not completed
 # DiscOS
 A Great Way To Make People Think Your Using Some Old PC!
 you could be using Windows 12 but disguised as Windows 9x
